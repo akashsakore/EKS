@@ -27,4 +27,33 @@ Step 4: Run installer
 sudo ./aws/install
 Step 5: Verify installation
 aws --version
---------------------------------------------------------------------------------------------
+aws configure
+-------------------------------------------------------------------------------------------
+
+eksctl create cluster --name demo-cluster --region us-east-1 --fargate
+
+aws eks update-kubeconfig \
+  --region us-east-1 \
+  --name demo-cluster
+
+
+
+kubectl config current-context
+
+
+kubectl get nodes
+
+## Create Fargate profile
+
+eksctl create fargateprofile \
+    --cluster demo-cluster \
+    --region us-east-1 \
+    --name alb-sample-app \
+    --namespace game-2048
+
+kubectl get pods -n game-2048
+kubectl get svc -n game-2048
+kubectl get ingress -n game-2048
+-------------------------------------------------------------------------------------------
+
+-

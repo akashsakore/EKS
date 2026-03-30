@@ -16,3 +16,15 @@ sudo mv eksctl /usr/local/bin
 Step 4: Verify installation
 eksctl version
 --------------------------------------------------------------------------------------------
+
+Step 1: Download AWS CLI package
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+Step 2: Install unzip (if not installed)
+sudo apt install unzip -y
+Step 3: Unzip the package
+unzip awscliv2.zip
+Step 4: Run installer
+sudo ./aws/install
+Step 5: Verify installation
+aws --version
+--------------------------------------------------------------------------------------------

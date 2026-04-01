@@ -1,4 +1,4 @@
-Install kubectl on Linux (Ubuntu) - Direct Binary Install
+```Install kubectl on Linux (Ubuntu) - Direct Binary Install
 
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
@@ -48,6 +48,7 @@ kubectl get nodes
 eksctl create fargateprofile \
     --cluster demo-cluster \
     --region us-east-1 \
+```
     --name alb-sample-app \
     --namespace game-2048
 
